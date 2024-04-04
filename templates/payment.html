@@ -1,0 +1,85 @@
+<!-- payment.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+</head>
+<body>
+    <h1>Payment Page</h1>
+    <form action="/process_payment" method="post">
+        <input type="hidden" name="amount" value="500"> 
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="{{ publishable_key }}"
+        data-amount="50000"
+        data-name="Appointment Payment"
+        data-description="Pay 500 INR"
+        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+        data-locale="auto"
+        data-currency="inr">
+</script>
+
+    </form>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            text-align: center;
+        }
+        .stripe-button-el {
+            background-color: #0567cf;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .stripe-button-el:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Page</h1>
+        <form action="/process_payment" method="post">
+            <input type="hidden" name="amount" value="500"> 
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ publishable_key }}"
+            data-amount="50000"
+            data-name="Appointment Payment"
+            data-description="Pay 500 INR"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto"
+            data-currency="inr">
+            </script>
+        </form>
+    </div>
+</body>
+</html>

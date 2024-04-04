@@ -1,0 +1,110 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Confirmation</title>
+</head>
+<body>
+    <h2>Booking Confirmation</h2>
+    <p>{{ status }}</p>
+    <ul>
+        <li>{{ name }}</li>
+        <li>{{ email }}</li>
+        <li>{{ date }}</li>
+        <li>{{ dept }}</li>
+        <li>{{ phone }}</li>
+    </ul>
+    <form action="/payment" method="POST">
+        <input type="hidden" name="name" value="{{ name.split(': ')[1] }}">
+        <input type="hidden" name="email" value="{{ email.split(': ')[1] }}">
+        <input type="hidden" name="date" value="{{ date.split(': ')[1] }}">
+        <input type="hidden" name="dept" value="{{ dept.split(': ')[1] }}">
+        <input type="hidden" name="phone" value="{{ phone.split(': ')[1] }}">
+        <button type="submit">Pay 500 INR</button>
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Booking Confirmation</h2>
+        <p>{{ status }}</p>
+        <ul>
+            <li><strong>Name:</strong> {{ name }}</li>
+            <li><strong>Email:</strong> {{ email }}</li>
+            <li><strong>Date:</strong> {{ date }}</li>
+            <li><strong>Department:</strong> {{ dept }}</li>
+            <li><strong>Phone:</strong> {{ phone }}</li>
+        </ul>
+        <form action="/payment" method="POST">
+            <input type="hidden" name="name" value="{{ name.split(': ')[1] }}">
+            <input type="hidden" name="email" value="{{ email.split(': ')[1] }}">
+            <input type="hidden" name="date" value="{{ date.split(': ')[1] }}">
+            <input type="hidden" name="dept" value="{{ dept.split(': ')[1] }}">
+            <input type="hidden" name="phone" value="{{ phone.split(': ')[1] }}">
+            <button type="submit">Pay 500 INR</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+</head>
+<body>
+    <h1>Pay 500 INR</h1>
+    <form action="/process_payment" method="post">
+        <button type="submit">Pay 500 INR</button>
+    </form>
+</body>
+</html>
+ -->
